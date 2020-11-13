@@ -102,11 +102,12 @@ $file_name = $_FILES;
 				} else {echo 'invalid data item','\n';};
 			} 
 		}
-	} else if (isset($_POST['button1']) and empty($_POST['binX'])){
-		echo 'Bin Empty Nothing to Check';
-	}else{
-		echo 'Problem checking Bin '. $_POST['binX'],'\n';
-	} 
+	} else if (!isset($_POST['binX']) || empty($_FILES))
+	{
+		echo 'Empty Upload or Input Bin to check';
+	} else {
+		echo '';
+	}
 		
 	
 ?>
@@ -115,9 +116,10 @@ $file_name = $_FILES;
 window.onload = function() {
 	document.querySelectorAll('input').value = '';
 	document.getElementById('dispResult').value = '';
+	document.querySelector("textarea").value=''.resize=none;
+	document.getElementById("dispResult").readonly=true.resize:none.overflow=auto;
 	};
-document.querySelector("textarea").value=''.resize=none;
-document.getElementById("dispResult").readonly=true.resize:none.overflow=auto;
+
 document.querySelector("button").addEventListener("click", function(event){
 	event.preventDefault();
 	});
