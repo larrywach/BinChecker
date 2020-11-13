@@ -43,7 +43,7 @@
 <div class="col-md-6">
 <form method="POST" enctype="multipart/form-data">
 <div class="form-group">
-      <label for="binNo">Enter your Bin List(CC Number)</label>
+      <label for="binNo">Enter your Bin(CC Number)</label>
       <input type="text" class="form-control" name="binX" id="binX" autocomplete="off">
 </div> 
 
